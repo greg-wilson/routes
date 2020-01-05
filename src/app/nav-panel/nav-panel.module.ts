@@ -4,21 +4,24 @@ import { StaticNavPanelComponent } from './static-nav-panel/static-nav-panel.com
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { NavRoutingModule } from './nav-panel-routing.module';
-
-
+import { FloatingNavPanelComponent } from './floating-nav-panel/floating-nav-panel.component';
+import { MenuItemsComponent } from './menu-items/menu-items.component';
 
 @NgModule({
-  declarations: [StaticNavPanelComponent],
+  declarations: [
+    StaticNavPanelComponent,
+    FloatingNavPanelComponent,
+    MenuItemsComponent
+  ],
   imports: [
     CommonModule,
     MatListModule,
     MatButtonModule,
-    MatIconModule,
-    NavRoutingModule
+    MatIconModule
   ],
   exports: [
-    StaticNavPanelComponent
+    StaticNavPanelComponent,
+    FloatingNavPanelComponent
   ]
 })
 export class StaticNavPanelModule { }

@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./floating-nav-panel.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavPanelComponent implements OnInit, AfterViewInit, OnChanges {
+export class FloatingNavPanelComponent implements OnInit, AfterViewInit, OnChanges {
 
   @Input()
   position = 'left';

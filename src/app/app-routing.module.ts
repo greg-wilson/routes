@@ -8,9 +8,10 @@ import { AccessDeniedComponent } from './access-denied/access-denied.component';
 
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/speakers', pathMatch: 'full' },
-  { path: 'excon',   redirectTo: '/excon', pathMatch: 'full' },
+  { path: '',   component: StandAloneComponent },
+  { path: 'excon',  loadChildren: () => import('./excon/excon.module').then(m => m.ExconModule) },
   { path: 'standalone',   component: StandAloneComponent },
+  { path: 'speakers',  loadChildren: () => import('./speakers/speakers.module').then(m => m.SpeakersModule) },
   { path: 'guarded',   component: GuardedComponent, canActivate: [AppAuthGuardService] },
   { path: 'denied',   component: AccessDeniedComponent },
   { path: '**', component: PageNotFoundComponent }

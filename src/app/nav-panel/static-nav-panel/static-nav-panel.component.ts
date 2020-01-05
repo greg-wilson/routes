@@ -14,10 +14,10 @@ export class StaticNavPanelComponent implements OnInit {
   @Output()
   menuClick = new EventEmitter<MenuItem>();
 
-  currentMenuItem: MenuItem;
-
   @Input()
   showContent = false;
+
+  currentMenuItem: MenuItem;
 
   constructor() {
   }
@@ -31,13 +31,13 @@ export class StaticNavPanelComponent implements OnInit {
   }
 
   onClick(menu: MenuItem) {
-    if (this.currentMenuItem && this.currentMenuItem.route === menu.route) {
+    if (!this.currentMenuItem || this.currentMenuItem.route !== menu.route) {
+      this.showContent = true;
+      this.currentMenuItem = menu;
+    } else {
       this.showContent = false;
       this.currentMenuItem = null;
-    } else {
-      this.showContent = true;
     }
-    this.currentMenuItem = menu;
     this.menuClick.emit(menu);
   }
 }

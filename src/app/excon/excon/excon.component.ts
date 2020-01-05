@@ -17,30 +17,33 @@ export class ExconComponent implements OnInit {
 
   currentMenu: MenuItem;
 
-  menuItems = new Array<MenuItem>();
+  exconMenuItems = new Array<MenuItem>();
 
   constructor(private router: Router, private renderer: Renderer2) {
-    this.menuItems.push(new MenuItem('Cameras', 'Edit Cameras', 'videocam', 'cameras', 50));
-    this.menuItems.push(new MenuItem('Devices', 'Edit Devices', 'developer_board', 'devices', 50));
+    this.exconMenuItems.push(new MenuItem('Home', 'Excon Home', 'home', 'exconHome', 50));
+    this.exconMenuItems.push(new MenuItem('Cameras', 'Edit Cameras', 'videocam', 'cameras', 50));
+    this.exconMenuItems.push(new MenuItem('Devices', 'Edit Devices', 'developer_board', 'devices', 50));
+    this.exconMenuItems.push(new MenuItem('Standalone', 'Standalone Component', 'menu_book', 'standalone', 50));
   }
 
   ngOnInit() {
   }
 
-  menuClickHandler(menuItem: MenuItem) {
-    console.log(menuItem.name);
+  onMenuClick(menuItem: MenuItem) {
 
-    let menuWidth = '5vw';
-    let contentWidth = '95vw';
+    let menuWidth = '80px';
+    let contentWidth = 'calc(100% - 80px)';
+
     if (!this.currentMenu || this.currentMenu.route !== menuItem.route) {
       menuWidth = '25vw';
       contentWidth = '75vw';
+      this.currentMenu = menuItem;
+    } else {
+      this.currentMenu = null;
     }
-    this.currentMenu = menuItem;
 
     this.renderer.setStyle(this.menu.nativeElement, 'width', menuWidth);
     this.renderer.setStyle(this.content.nativeElement, 'width', contentWidth);
-    this.router.navigate(['/excon', { outlets: { exconoutlet: [menuItem.route] } }]);
+    this.router.navigate(['/excon', { outlets: { exconOutlet: [menuItem.route] } }]);
   }
-
 }

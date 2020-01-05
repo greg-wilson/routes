@@ -17,7 +17,7 @@ export class SpeakerMenuComponent implements OnInit {
    * Demo using the router serivce to navigate
    */
   navigate() {
-    this.router.navigate(['/speakers', { outlets: { speakeroutlet: ['speakermap'] } }]);
+    this.router.navigate(['/speakers', { outlets: { speakerOutlet: ['speakermap'] } }]);
   }
 
 }

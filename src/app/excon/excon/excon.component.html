@@ -1,10 +1,15 @@
 <div class="container">
+    <!-- the nav menu -->
     <div #menu class="menu content-border">
-        <app-nav-panel (menuClick)="menuClickHandler($event)" [menuItems]="menuItems">
-            <router-outlet name="exconoutlet"></router-outlet>
+        <app-nav-panel (menuClick)="onMenuClick($event)" [menuItems]="exconMenuItems">
+            <!-- router outlet used to display content within the nav panel -->
+            <div class="nav-content">
+                <router-outlet name="exconOutlet"></router-outlet>
+            </div>
         </app-nav-panel>
     </div>
 
+    <!-- the main content (a map) -->
     <div #content class="content content-border">
         <app-excon-map></app-excon-map>
     </div>

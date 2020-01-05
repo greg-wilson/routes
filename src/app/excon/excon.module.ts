@@ -9,18 +9,21 @@ import { ExconDevicesComponent } from './excon-devices/excon-devices.component';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { StaticNavPanelModule } from '../nav-panel/nav-panel.module';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
-  declarations: [ExconMapComponent, ExconComponent, ExconCamerasComponent, ExconDevicesComponent],
+  declarations: [ExconMapComponent, ExconComponent, ExconCamerasComponent, ExconDevicesComponent, HomeComponent],
   imports: [
     CommonModule,
     ExconRoutingModule,
     StaticNavPanelModule,
     MatListModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule
   ]
 })
 export class ExconModule { }

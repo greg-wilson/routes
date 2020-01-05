@@ -9,13 +9,13 @@ const routes: Routes = [
   {
     path: 'speakers', component: SpeakerContentComponent, children: [
       {
-        path: '', component: SpeakerDetailsComponent, outlet: 'speakeroutlet'
+        path: '', component: SpeakerDetailsComponent, outlet: 'speakerOutlet'
       },
       {
-        path: 'speaker-details', component: SpeakerDetailsComponent, outlet: 'speakeroutlet'
+        path: 'speaker-details', component: SpeakerDetailsComponent, outlet: 'speakerOutlet'
       },
       {
-        path: 'speakermap', component: SpeakerMapComponent, outlet: 'speakeroutlet'
+        path: 'speakermap', component: SpeakerMapComponent, outlet: 'speakerOutlet'
       },
     ]
   },

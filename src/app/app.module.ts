@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CameraModule } from './camera/camera.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,7 +23,6 @@ import { ExconModule } from './excon/excon.module';
   ],
   imports: [
     BrowserModule,
-    CameraModule,
     BrowserAnimationsModule,
     SpeakersModule,
     ExconModule,
