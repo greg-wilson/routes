@@ -6,12 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { SpeakersModule } from './speakers/speakers.module';
 import { StandAloneComponent } from './stand-alone/stand-alone.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GuardedComponent } from './guarded/guarded.component';
 import { AccessDeniedComponent } from './access-denied/access-denied.component';
 import { ExconModule } from './excon/excon.module';
+import { SpeakersModule } from './speakers/speakers.module';
 
 @NgModule({
   declarations: [
@@ -24,8 +24,8 @@ import { ExconModule } from './excon/excon.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    SpeakersModule,
     ExconModule,
+    // SpeakersModule,
     MatToolbarModule,
     MatButtonModule,
     AppRoutingModule

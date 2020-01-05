@@ -10,7 +10,12 @@ import { SpeakersRoutingModule } from './speakers-routing.module';
 import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [SpeakerMenuComponent, SpeakerDetailsComponent, SpeakerContentComponent, SpeakerMapComponent],
+  declarations: [
+    SpeakerMenuComponent,
+    SpeakerDetailsComponent,
+    SpeakerContentComponent,
+    SpeakerMapComponent
+  ],
   imports: [
     CommonModule,
     MatListModule,

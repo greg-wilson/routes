@@ -6,26 +6,30 @@ import { SpeakerContentComponent } from './speaker-content/speaker-content.compo
 
 
 const routes: Routes = [
+  { path: '', redirectTo: 'speakers' },
   {
     path: 'speakers', component: SpeakerContentComponent, children: [
       {
-        path: '', component: SpeakerDetailsComponent, outlet: 'speakerOutlet'
-      },
-      {
-        path: 'speaker-details', component: SpeakerDetailsComponent, outlet: 'speakerOutlet'
+        path: 'speakerdetails', component: SpeakerDetailsComponent, outlet: 'speakerOutlet'
       },
       {
         path: 'speakermap', component: SpeakerMapComponent, outlet: 'speakerOutlet'
       },
     ]
   },
-  {
-    path: 'speakermap2', component: SpeakerMapComponent
-  }
+  // {
+  //   path: '', component: SpeakerContentComponent
+  // },
+  // {
+  //   path: 'speakerdetails', component: SpeakerDetailsComponent, outlet: 'speakerOutlet'
+  // },
+  // {
+  //   path: 'speakermap', component: SpeakerMapComponent, outlet: 'speakerOutlet'
+  // },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class SpeakersRoutingModule { }

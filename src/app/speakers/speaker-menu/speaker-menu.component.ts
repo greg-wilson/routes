@@ -17,7 +17,9 @@ export class SpeakerMenuComponent implements OnInit {
    * Demo using the router serivce to navigate
    */
   navigate() {
-    this.router.navigate(['/speakers', { outlets: { speakerOutlet: ['speakermap'] } }]);
+    // seems that child routes to named outlets are kinda weird when lazy loaded,
+    // need to specify the parent route to get this to work. Not an issue for eager loaded modules
+    this.router.navigate(['/speakers/speakers', { outlets: { speakerOutlet: ['speakermap'] } }]);
   }
 
 }

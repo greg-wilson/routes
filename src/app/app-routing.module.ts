@@ -8,12 +8,18 @@ import { AccessDeniedComponent } from './access-denied/access-denied.component';
 
 
 const routes: Routes = [
-  { path: '',   component: StandAloneComponent },
-  { path: 'excon',  loadChildren: () => import('./excon/excon.module').then(m => m.ExconModule) },
-  { path: 'standalone',   component: StandAloneComponent },
-  { path: 'speakers',  loadChildren: () => import('./speakers/speakers.module').then(m => m.SpeakersModule) },
-  { path: 'guarded',   component: GuardedComponent, canActivate: [AppAuthGuardService] },
-  { path: 'denied',   component: AccessDeniedComponent },
+  { path: '', component: StandAloneComponent },
+  { path: 'standalone', component: StandAloneComponent },
+  // lazy load excon - remove ExconModule from app.moulde.ts
+  // { path: 'excon',  loadChildren: () => import('./excon/excon.module').then(m => m.ExconModule) },
+  // eager load excon
+  { path: 'excon', redirectTo: '/excon', pathMatch: 'full' },
+  // lazy load speakers - remove SpeakerModule from app.module.ts
+  { path: 'speakers', loadChildren: () => import('./speakers/speakers.module').then(m => m.SpeakersModule) },
+  // eager load speakers module
+  // { path: 'speakers', redirectTo: '/speakers' },
+  { path: 'guarded', component: GuardedComponent, canActivate: [AppAuthGuardService] },
+  { path: 'denied', component: AccessDeniedComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
