@@ -1,0 +1,18 @@
+<div #wrapper class="wrapper" [ngClass]="{'right': position === 'right', 'left': position === 'left' }">
+    <div class="sidebar">
+        <div class="sidebar-content">
+
+            <div class="scrollbar-container">
+
+                <app-menu-items *ngIf="isRight()" [menuItems]="menuItems" (menuClick)="show($event)"></app-menu-items>
+
+                <div #navcontent class="content" [ngClass]="{ 'hide': hideContent, 'show': !hideContent}">
+                    <router-outlet name="navoutlet"></router-outlet>
+                </div>
+
+                <app-menu-items *ngIf="!isRight()" [menuItems]="menuItems" (menuClick)="show($event)"></app-menu-items>
+
+            </div>
+        </div>
+    </div>
+</div>

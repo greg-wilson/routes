@@ -1,0 +1,10 @@
+<mat-list role="list">
+    <mat-list-item role="listitem">
+        <button [routerLink]="[{ outlets: { speakeroutlet: ['speakerdetails'] } }]" mat-button>Details</button>
+
+    </mat-list-item>
+    <mat-list-item role="listitem">
+        <!-- <button [routerLink]="[{ outlets: { speakeroutlet: ['speakermap'] } }]" mat-button>Map</button> -->
+        <button (click)="navigate()" mat-button>Map</button>
+    </mat-list-item>
+</mat-list>

@@ -1,0 +1,10 @@
+.header{
+    display:flex;
+    flex-direction: row;
+}
+
+.nav-panel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

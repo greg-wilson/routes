@@ -1,0 +1,11 @@
+<div class="container">
+    <div #menu class="menu content-border">
+        <app-nav-panel (menuClick)="menuClickHandler($event)" [menuItems]="menuItems">
+            <router-outlet name="exconoutlet"></router-outlet>
+        </app-nav-panel>
+    </div>
+
+    <div #content class="content content-border">
+        <app-excon-map></app-excon-map>
+    </div>
+</div>

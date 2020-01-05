@@ -1,0 +1,7 @@
+<div class="menu">
+    <ul class="sidebar-nav">
+        <li *ngFor="let item of menuItems">
+            <i (click)="show(item)" class="{{item.iconClass}}"></i>
+        </li>
+    </ul>
+</div>

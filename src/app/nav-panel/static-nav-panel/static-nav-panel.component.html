@@ -1,0 +1,23 @@
+<!-- <section *ngIf="showContent" class="header mat-typography">
+    <button (click)="back()" mat-icon-button>
+        <mat-icon>arrow_back</mat-icon>
+    </button>
+    <h1>Excon</h1>
+</section> -->
+
+<div class="nav-panel">
+    <div>
+        <ng-content *ngIf="showContent"></ng-content>
+    </div>
+
+    <div>
+        <mat-list role="list">
+            <mat-list-item *ngFor="let menu of menuItems" role="listitem">
+                <button (click)="onClick(menu)" mat-icon-button>
+                    <mat-icon>{{menu.icon}}</mat-icon>
+                </button>
+                <!-- <button [routerLink]="[{ outlets: { speakeroutlet: ['speakerdetails'] } }]" mat-button>Details</button> -->
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div>

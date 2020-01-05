@@ -3,13 +3,33 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CameraModule } from './camera/camera.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { SpeakersModule } from './speakers/speakers.module';
+import { StandAloneComponent } from './stand-alone/stand-alone.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GuardedComponent } from './guarded/guarded.component';
+import { AccessDeniedComponent } from './access-denied/access-denied.component';
+import { ExconModule } from './excon/excon.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StandAloneComponent,
+    PageNotFoundComponent,
+    GuardedComponent,
+    AccessDeniedComponent
   ],
   imports: [
     BrowserModule,
+    CameraModule,
+    BrowserAnimationsModule,
+    SpeakersModule,
+    ExconModule,
+    MatToolbarModule,
+    MatButtonModule,
     AppRoutingModule
   ],
   providers: [],
