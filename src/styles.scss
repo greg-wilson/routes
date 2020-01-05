@@ -2,3 +2,34 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.mat-card[_ngcontent-c3] {
+    flex: 1 1 50%;
+    width: 50%;
+}
+
+.mat-card {
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: block;
+    position: relative;
+    padding: 24px;
+    border-radius: 2px;
+}
+
+.mat-card {
+    background: #424242;
+    color: #fff;
+}
+
+.mat-card {
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+.mat-card {
+    margin: 15px;
+}

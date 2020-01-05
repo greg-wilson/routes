@@ -20,7 +20,7 @@ export class ExconComponent implements OnInit {
   exconMenuItems = new Array<MenuItem>();
 
   constructor(private router: Router, private renderer: Renderer2) {
-    this.exconMenuItems.push(new MenuItem('Home', 'Excon Home', 'home', 'exconHome', 50));
+    this.exconMenuItems.push(new MenuItem('Home', 'Excon Home', 'home', 'home', 50));
     this.exconMenuItems.push(new MenuItem('Cameras', 'Edit Cameras', 'videocam', 'cameras', 50));
     this.exconMenuItems.push(new MenuItem('Devices', 'Edit Devices', 'developer_board', 'devices', 50));
     this.exconMenuItems.push(new MenuItem('Standalone', 'Standalone Component', 'menu_book', 'standalone', 50));
@@ -44,6 +44,6 @@ export class ExconComponent implements OnInit {
 
     this.renderer.setStyle(this.menu.nativeElement, 'width', menuWidth);
     this.renderer.setStyle(this.content.nativeElement, 'width', contentWidth);
-    this.router.navigate(['/excon', { outlets: { exconOutlet: [menuItem.route] } }]);
+    this.router.navigate(['excon', menuItem.route]);
   }
 }

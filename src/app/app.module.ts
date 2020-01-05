@@ -10,8 +10,8 @@ import { StandAloneComponent } from './stand-alone/stand-alone.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GuardedComponent } from './guarded/guarded.component';
 import { AccessDeniedComponent } from './access-denied/access-denied.component';
-import { ExconModule } from './excon/excon.module';
-import { SpeakersModule } from './speakers/speakers.module';
+// import { ExconModule } from './excon/excon.module';
+// import { SpeakersModule } from './speakers/speakers.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { SpeakersModule } from './speakers/speakers.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ExconModule,
+    // ExconModule,
     // SpeakersModule,
     MatToolbarModule,
     MatButtonModule,

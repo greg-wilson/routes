@@ -16,16 +16,7 @@ const routes: Routes = [
         path: 'speakermap', component: SpeakerMapComponent, outlet: 'speakerOutlet'
       },
     ]
-  },
-  // {
-  //   path: '', component: SpeakerContentComponent
-  // },
-  // {
-  //   path: 'speakerdetails', component: SpeakerDetailsComponent, outlet: 'speakerOutlet'
-  // },
-  // {
-  //   path: 'speakermap', component: SpeakerMapComponent, outlet: 'speakerOutlet'
-  // },
+  }
 ];
 
 @NgModule({
